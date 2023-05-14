@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.scss">
+    <title>Turov_Damir</title>
+</head>
+<body>
+    <div class="bg-image" style="background-image: url(img/bg.jpg)">
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container">
+                    <div class="navbar-brand d-flex align-items-center">
+                        <img src="img/1.jpg" width="100" height="100" alt="" class="plank img-fluid">
+                        <a href="#" class="text-white" style="text-decoration: none;">
+                            <p class="amogus">Звёзды мирового хоккея</p>
+                        </a>
+                    </div>
+                    <button type="button" class="Atomic">Click</button>
+                </div>
+            </nav>
+        </header>
+        <main>
+          <div class = "row signature">
+            <h1>Топ-5 хоккеистов</h1>
+          </div>
+          <div class="container">
+            <div class="row row-cols-xs-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 myclass">
+              <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-4 g-3 cl">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modal" id="object-1">
+                  <img src="img/1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Александр Михайлович Овечкин</h5>
+                    <p class="card-text">Российский хоккеист, левый крайний нападающий и капитан клуба НХЛ «Вашингтон Кэпиталз». Обладатель Кубка Стэнли 2018 года. Трёхкратный чемпион мира.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-4 g-3 cl">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modal" id="object-2">
+                  <img src="img/2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Евгений Владимирович Малкин</h5>
+                    <p class="card-text">Российский хоккеист, центральный нападающий клуба НХЛ «Питтсбург Пингвинз». Трёхкратный обладатель Кубка Стэнли в составе «Питтсбург Пингвинз», двукратный чемпион мира.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-4 g-3 cl">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modal" id="object-3">
+                  <img src="img/3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Александр Валерьевич Радулов</h5>
+                    <p class="card-text">Российский хоккеист, нападающий клуба КХЛ «Ак Барс». Двукратный чемпион мира 2008 и 2009. Обладатель Кубка Гагарина 2011 года в составе уфимского «Салавата Юлаева».</p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-4 g-3 cl">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modal" id="object-4">
+                  <img src="img/4.jpg" class="card-img-top img-fluid" alt="-">
+                  <div class="card-body">
+                    <h5 class="card-title">Вадим Александрович Шипачёв</h5>
+                    <p class="card-text">Российский хоккеист, капитан и центральный нападающий казанского «Ак Барса». Олимпийский чемпион, чемпион мира, двукратный обладатель Кубка Гагарина. Второй бомбардир в истории КХЛ.</p>
+        
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-8 col-md-4 col-lg-4 col-xl-4 g-3 cl">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#modal" id="object-5">
+                  <img src="img/5.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Уэйн Дуглас Гретцки</h5>
+                    <p class="card-text">Канадский хоккеист. Один из самых известных спортсменов XX века. В 1978—1988 годах выступал за клуб «Эдмонтон Ойлерз», с которым четыре раза выигрывал Кубок Стэнли.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel" popover.hover.top="Popover!" title="Бутерброд">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" popover.hover.top="Popover!" title="Состав">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" popover.hover.top="Popover!" title="Закрыть">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="position-fixed top-0 end-0 p-3">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <strong class="me-auto">Упс!</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  В разработке...
+                </div>
+              </div>
+          </div>
+        </main>
+        <footer>
+          <div class="container d-flex justify-content-between">
+            <div class="text-white">Туров Дамир</div>
+            <div class="base">
+              <a href=""
+                ><img src="img/f1.png" alt="vk" class="icons"
+              /></a>
+              <a href=""
+                ><img src="img/f2.png" alt="instagram" class="icons"
+              /></a>
+              <a href=""
+                ><img src="img/f3.png" alt="twitter" class="icons"
+              /></a>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <!--Всегда в конце-->
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>
