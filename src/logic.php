@@ -1,12 +1,26 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 
-// Открываем JSON файл
-$jsonFile = '../data/objects.json';
-$data = file_get_contents($jsonFile);
-// Декодируем JSON данные в ассоциативный массив
-$jsonData = json_decode($data, true);
+$connect = mysqli_connect('localhost', 'root', '', 'blax');
+if ($connect === false)
+{
+    die("ошибка поключения к бд");
+}
+$sql = "SELECT * FROM blaxtone;";
+if ($result=mysqli_query($connect,$sql))
+{
 
-// Отправляем JSON данные на фронтенд
-header('Content-Type: application/json');
-echo json_encode($jsonData);
+    $helloResult = [];
+    foreach($result as $item)
+    {
+        array_push($helloResult, $item);
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($helloResult);
+}
+else
+{
+    header('Content-Type: application/json');
+    echo json_encode("ошибка");
+}
