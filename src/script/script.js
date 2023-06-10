@@ -1,8 +1,7 @@
 import $ from 'jquery';
 import * as bootstrap from 'bootstrap';
 import { initTooltips, fillModal, navigateCards } from './utils';
-import data from '../../data/objects.json';
-import template1 from '../view/comp/cards.hbs';
+
 
 
 console.log("Мы зашли в script.js");
@@ -37,94 +36,35 @@ $(document).ready(() => {
     }
   });
   const loadButton = $('#toastbtn');
-console.log(loadButton);
-console.log("Длина");
-console.log($(document).find('#new-card-modal').length);
-const newCardModal = new bootstrap.Modal($('#new-card-modal'));
-console.log($('#new-card-modal'));
-console.log("Hello");
 
 const newCardForm = $('#new-card-form')[0];
 const saveNewButton = $('#save-new-button')[0];
 const saveButton = $('#save-button')[0];
 
-$('#toastbtn').on('click', () => {
-  $('#new-img, #new-name, #new-description').val('');
+  $(document).on('click', '#toastbtn', function (e) {
+    const newCardModal = new bootstrap.Modal($('#new-card-modal'));
+    console.log('ddd');
+    const modal = $(document).find("#new-card-modal");
+    fillModal(modal);
+    newCardModal.show();
+  })
+  
 
-  newCardModal.show();
-});
 
 
-const objects = [];
-objects.push(...data);
+
 
 function renderCards() {
-  const html = template1({ objects });
-  cards.innerHTML = html;
+ 
 }
 
 
 saveNewButton.addEventListener('click', (event) => {
-  const newModal = $('#new-card-modal');
-  const newimg = $('#new-img').val();
-  const newName = $('#new-name').val();
-  const newDescription = $('#new-description').val();
 
-  if (!newimg || !newName || !newDescription) {
-    alert("Заполните все поля формы!");
-    return;
-    }
-    else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
-    alert("Название не может начинаться с цифры!");
-    return;
-    }
-
-  const newObject = {
-    id: objects.length + 1,
-    img: newimg,
-    name: newName,
-    description: newDescription
-  };
-
-  objects.push(newObject);
-  let html = template1({objects});
-  let app = document.getElementById('cards');
-  app.innerHTML = html;
-
-  event.preventDefault();
-
-  const bootstrapModal = bootstrap.Modal.getInstance(newModal);
-  bootstrapModal.hide();
 });
 
 
 saveButton.addEventListener('click', (event) => {
-  const newModal = $('#card-modal');
-  const newimg = $('#img').val();
-  const newName = $('#name').val();
-  const newDescription = $('#description').val();
-
-  if (!newimg || !newName || !newDescription) {
-    alert("Заполните все поля формы!");
-    return;
-    }
-    else if (/^\d/.test(newimg) || /^\d/.test(newName)) {
-    alert("Название не может начинаться с цифры!");
-    return;
-    }
-
-  const id = $('#modal').attr('current-item');
-  const elements = id.split('-').slice(1) - 1;
-  objects[elements].img = $('#img').val();
-  objects[elements].name = $('#name').val();
-  objects[elements].description = $('#description').val();
-  let html = template1({objects});
-  let app = document.getElementById('cards');
-  app.innerHTML = html;
 });
 });
-
-
-
-
 
